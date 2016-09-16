@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  venue_name: MyString
+  address: MyString
+  country: MyString
+  description: MyString
+  website_url: MyString
+  purchase_url: MyString
+  logo: MyString
+  primary_image: MyString
+  instagram: MyString
+  hashtag: MyString
+  facebook: MyString
+  twitter: MyString
+  instagram_api: MyString
+  start_date: 2016-09-15
+  end_date: 2016-09-15
+  day_description: MyString
+  start_time: 2016-09-15 17:08:20
+  end_time: 2016-09-15 17:08:20
+
+two:
+  name: MyString
+  venue_name: MyString
+  address: MyString
+  country: MyString
+  description: MyString
+  website_url: MyString
+  purchase_url: MyString
+  logo: MyString
+  primary_image: MyString
+  instagram: MyString
+  hashtag: MyString
+  facebook: MyString
+  twitter: MyString
+  instagram_api: MyString
+  start_date: 2016-09-15
+  end_date: 2016-09-15
+  day_description: MyString
+  start_time: 2016-09-15 17:08:20
+  end_time: 2016-09-15 17:08:20
