@@ -1,2 +1,52 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+
+  <div class="banner-content">
+    <br>
+    <br>
+    <br>
+    <h1 class="text-center">List your Event</h1>
+
+     <div class="wrapper-form">
+
+
+      <%= simple_form_for [@event] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :venue_name %>
+        <%= f.input :address %>
+        <%= f.input :country %>
+        <%= f.input :description %>
+        <%= f.input :website_url %>
+        <%= f.input :purchase_url %>
+        <%= f.input :logo %>
+        <%= f.input :primary_image %>
+        <%= f.input :instagram %>
+        <%= f.input :hashtag %>
+        <%= f.input :facebook %>
+        <%= f.input :twitter %>
+        <%= f.input :instagram_api %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.input :day_description %>
+        <%= f.input :start_time %>
+        <%= f.input :end_time %>
+        <%= f.button :submit %>
+      <% end %>
+
+
+
+
+
+       <!--  <input type="date" class="form-control input-md" placeholder="check in">
+        <input type="date" class="form-control input-md" placeholder="check out">
+        <select class="form-control input-md" placeholder="Type">
+          <option value="1">Type</option>
+          <option value="2">Scooter</option>
+          <option value="3">Motorcycle</option>
+          <option value="4">Moped</option>
+        </select> -->
+        <!-- <input type="submit" class="btn btn-info btn-md" value="Search"> -->
+
+
+      <br><br>
+
+    </div>
+  </div>
