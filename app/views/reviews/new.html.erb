@@ -1,0 +1,11 @@
+<h1>Reviews#new</h1>
+<p>Find me in app/views/reviews/new.html.erb</p>
+
+
+      <%= simple_form_for [@event, @review] do |f| %>
+        <%= f.input :headline %>
+        <%= f.input :description %>
+        <%= f.input :rating %>
+        <%= f.input :date %>
+        <%= f.button :submit %>
+      <% end %>

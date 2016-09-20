@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.string :description
       t.integer :rating
       t.date :date
+      t.references :event, foreign_key: true
 
       t.timestamps
     end

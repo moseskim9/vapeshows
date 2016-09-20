@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
 
+
+
   devise_for :users
+
   root 'pages#home'
 
   resources :users
 
-  resources :events
+  resources :events do
+
+    resources :reviews
+
+  end
 
   get 'pages/home'
 

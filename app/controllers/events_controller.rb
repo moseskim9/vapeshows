@@ -7,6 +7,8 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    @events = Event.all
+    @reviews = @event.reviews
   end
 
   def new

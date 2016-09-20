@@ -20,6 +20,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :day_description
       t.time :start_time
       t.time :end_time
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

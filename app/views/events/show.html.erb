@@ -1,2 +1,38 @@
 <h1>Events#show</h1>
 <p>Find me in app/views/events/show.html.erb</p>
+
+
+<%= @event.name %>
+<%= @event.venue_name %>
+<%= @event.address %>
+<%= @event.country %>
+<%= @event.description %>
+<%= @event.website_url %>
+<%= @event.purchase_url %>
+<%= @event.logo %>
+<%= @event.primary_image %>
+<%= @event.instagram %>
+<%= @event.hashtag %>
+<%= @event.facebook %>
+<%= @event.twitter %>
+<%= @event.instagram_api %>
+<%= @event.start_date %>
+<%= @event.end_date %>
+<%= @event.day_description %>
+<%= @event.start_time %>
+<%= @event.end_time %>
+
+
+
+<h2>Latest Reviews</h2>
+
+<% @reviews.each do |r| %>
+  <p> <%= r.headline %> </p>
+  <p> <%= r.description %> </p>
+  <p> <%= r.rating %> </p>
+  <p> <%= r.date %> </p>
+<% end %>
+
+<%= link_to "Add a Review", new_event_review_path(@event.id) %>
+
+
