@@ -16,8 +16,6 @@
         <%= f.input :description %>
         <%= f.input :website_url %>
         <%= f.input :purchase_url %>
-        <%= f.input :logo %>
-        <%= f.input :primary_image %>
         <%= f.input :instagram %>
         <%= f.input :hashtag %>
         <%= f.input :facebook %>
@@ -28,6 +26,10 @@
         <%= f.input :day_description %>
         <%= f.input :start_time %>
         <%= f.input :end_time %>
+        <%= f.input :logo %>
+        <%= f.input :logo_cache, as: :hidden %>
+        <%= f.input :primary_image %>
+        <%= f.input :primary_image_cache, as: :hidden %>
         <%= f.button :submit %>
       <% end %>
 
