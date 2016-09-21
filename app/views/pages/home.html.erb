@@ -5,26 +5,23 @@
     <h1>Vape Shows</h1>
     <p>Where you find all shows</p>
     <div class="wrapper-form">
-      <form class="form-inline" role="form" action="stores/search">
-        <input type="text" class="form-control form-search" id='location' name="location" value="Los Angeles">
-        <button type="submit" class="btn btn-default-search">Search</button>
-      </form>
+
     </div>
   </div>
 </div>
 
 
+
   <div class="logos-container text-center">
     <div class="container">
-      <div class="col-md-6 logos-margin">
-        <img src="">
-      </div>
-      <div class="col-md-6 logos-margin">
-        <img src="">
-      </div>
-      <div class="col-md-6">
-        <img src="">
+      <div class="row">
+
+        <% @events.each do |x| %>
+        <div class="image-crop col-xs-2">
+          <%= cl_image_tag(x.logo) %>
+        </div>
+        <% end %>
+
       </div>
     </div>
   </div>
-

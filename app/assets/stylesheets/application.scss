@@ -15,8 +15,17 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @import "pages";
 @import "events";
 @import "users";
 @import "navbar";
+@import "cards";
+@import "logo";
+
+.body-margin {
+  width: 85%;
+  margin: 0 auto;
+}

@@ -1,42 +1,46 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="body-margin">
+
+  <div class="image-crop card" >
+    <%= cl_image_tag @event.primary_image %>
+      <div class="logo-inside-card">
+        <%= cl_image_tag(@event.logo) %>
+      </div>
+  </div>
 
 
-<%= @event.name %>
-<%= @event.venue_name %>
-<%= @event.address %>
-<%= @event.country %>
-<%= @event.description %>
-<%= @event.website_url %>
-<%= @event.purchase_url %>
+  <div class="card-info">
+    <h4>Event: </h4>   <p><%= @event.name %></p>
 
-<%= @event.instagram %>
-<%= @event.hashtag %>
-<%= @event.facebook %>
-<%= @event.twitter %>
-<%= @event.instagram_api %>
-<%= @event.start_date %>
-<%= @event.end_date %>
-<%= @event.day_description %>
-<%= @event.start_time %>
-<%= @event.end_time %>
+    <h4>Venue: </h4> <p><%= @event.name %></p>
+    <h4>Address: </h4> <p><%= @event.address %></p>
+    <h4>Country: </h4> <p><%= @event.country %></p>
+    <h4>Description: </h4> <p><%= @event.description %></p>
+    <h4>Website Url: </h4> <p><%= @event.website_url %></p>
+    <h4>Purchase Url: </h4> <p><%= @event.purchase_url %></p>
+    <h4>Instagram: </h4> <p><%= @event.instagram %></p>
+    <h4>Hashtag: </h4> <p><%= @event.hashtag %></p>
+    <h4>Facebook: </h4> <p><%= @event.facebook %></p>
+    <h4>Twitter: </h4> <p><%= @event.twitter %></p>
+    <h4>Instagram API: </h4> <p><%= @event.instagram_api %></p>
+    <h4>Start Date: </h4> <p><%= @event.start_date %></p>
+    <h4>End Date: </h4> <p><%= @event.end_date %></p>
+    <h4>Day Description: </h4> <p><%= @event.day_description %></p>
+    <h4>Start Time: </h4> <p><%= @event.start_time %></p>
+    <h4>End Time: </h4> <p><%= @event.end_time %></p>
+  </div>
 
-<div class="card" >
-<%= cl_image_tag @event.primary_image %>
 
-<%= cl_image_tag("@event.primary_image",
-      width: 400, height: 300, crop: :fill) %>
+
+  <h2>Latest Reviews</h2>
+
+  <% @reviews.each do |r| %>
+    <h4> <%= r.headline %> </h4>
+    <h4> <%= r.description %> </h4>
+    <h4> <%= r.rating %> </h4>
+    <h4> <%= r.date %> </h4>
+  <% end %>
+
+  <%= link_to "Add a Review", new_event_review_path(@event.id) %>
+
 </div>
-
-<h2>Latest Reviews</h2>
-
-<% @reviews.each do |r| %>
-  <p> <%= r.headline %> </p>
-  <p> <%= r.description %> </p>
-  <p> <%= r.rating %> </p>
-  <p> <%= r.date %> </p>
-<% end %>
-
-<%= link_to "Add a Review", new_event_review_path(@event.id) %>
-
 
