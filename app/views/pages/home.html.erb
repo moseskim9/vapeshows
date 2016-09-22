@@ -1,9 +1,12 @@
 
 
 <div class="banner" style="background-image: linear-gradient(107deg, rgba(0,25,29,0.6) 0%, rgba(0,-344,27,0.3) 50%), url('http://www.quadrathell.cn.ua/_nw/18/94684225.jpg');">
-  <div class="banner-content">
+  <div class="banner-content white">
     <h1>Vape Shows</h1>
     <p>Where you find all shows</p>
+    <%= link_to events_path(@events) do %>
+    <button class="button" style="vertical-align:middle"><span> Discover Events </span></button>
+    <% end %>
     <div class="wrapper-form">
 
     </div>
@@ -12,7 +15,7 @@
 
 
 
-  <div class="logos-container text-center">
+ <!--  <div class="logos-container text-center">
     <div class="container">
       <div class="row">
 
@@ -24,4 +27,4 @@
 
       </div>
     </div>
-  </div>
+  </div> -->

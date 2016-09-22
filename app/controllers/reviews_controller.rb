@@ -18,6 +18,7 @@ before_action :find_review, only: [:show, :edit, :update, :destroy]
     @event = Event.find(params[:event_id])
     @review = @event.reviews.build(review_params)
     if @review.save
+      # @event.new_averagerate(@review.rating)
       redirect_to event_path(@event)
     else
       render :new

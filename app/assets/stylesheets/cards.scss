@@ -1,6 +1,5 @@
 
 .card {
-  background-image: url('<%= cl_image_tag @event.primary_image %>');
   background-size: cover !important;
   width: 100%;
   display: flex;
@@ -8,7 +7,6 @@
   justify-content: center;
   position: relative;
   padding: 25px 0;
-
 }
 .oh {
   overflow: hidden;
@@ -51,4 +49,7 @@
 }
 .card-link:hover{
   opacity: 0.1;
+}
+.card-left {
+  width: 80%;
 }

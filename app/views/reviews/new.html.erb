@@ -1,11 +1,13 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+
+<div class="review-body-margin">
+<div class="text-center tbm50"><h1>New Review</h1></div>
 
 
       <%= simple_form_for [@event, @review] do |f| %>
         <%= f.input :headline %>
-        <%= f.input :description %>
+        <%= f.input :description, :as => :text, :input_html => { 'rows' => 5} %>
         <%= f.input :rating %>
         <%= f.input :date %>
         <%= f.button :submit %>
       <% end %>
+</div>

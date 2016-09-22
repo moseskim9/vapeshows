@@ -24,8 +24,38 @@
 @import "navbar";
 @import "cards";
 @import "logo";
+@import "banner";
+@import "container";
+@import "social";
+@import "reviews";
+@import "buttons";
+@import "ratings";
+
+h1,h2,h3,h4,h5,h6,p,ul,li {
+  color: #384452;
+}
 
 .body-margin {
   width: 85%;
   margin: 0 auto;
+}
+.tbm15 {
+  margin: 15px 0;
+}
+.tbm50 {
+  margin: 50px 0;
+}
+.no-padding {
+  padding: 0 0;
+}
+.line-bottom {
+  border-bottom: solid 2px gray;
+  line-height: 2em;
+}
+.line-top {
+  border-top: solid 2px gray;
+  line-height: 2em;
+}
+.line-height {
+  line-height: 2em;
 }
