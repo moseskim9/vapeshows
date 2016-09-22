@@ -4,11 +4,26 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = Event.all
+    # @events = Event.where.not(latitude: nil, longitude: nil)
+
+    #     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+    #       marker.lat event.latitude
+    #       marker.lng event.longitude
+    #       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    #     end
   end
 
   def show
     @events = Event.all
     @reviews = @event.reviews
+    @events = Event.where.not(latitude: nil, longitude: nil)
+
+        @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+          marker.lat event.latitude
+          marker.lng event.longitude
+          # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+        end
+    @event_coordinates = { lat: @event.latitude, lng: @event.longitude }
   end
 
   def new

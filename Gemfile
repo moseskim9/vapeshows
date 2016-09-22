@@ -38,6 +38,12 @@ gem 'devise'
 gem 'figaro'
 gem 'carrierwave'
 gem 'cloudinary'
+gem "geocoder"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 
 
