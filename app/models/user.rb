@@ -28,7 +28,7 @@ class User < ApplicationRecord
        end
 
        return user
-   end
+  end
 
    def self.new_with_session(params, session)
        super.tap do |user|
