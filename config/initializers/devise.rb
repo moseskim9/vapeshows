@@ -26,11 +26,21 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
-  config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
-      scope: 'email',
-      info_fields: 'email, first_name, last_name',
-      image_size: 'square',  # 50x50, guaranteed ratio
-      secure_image_url: true
+  User.omniauth_providers.each do |provider_name|
+      if provider_name == :developer
+        config.omniauth :developer
+      else
+        api_key = ENV["#{provider_name.upcase}_API_KEY"]
+        api_secret = ENV["#{provider_name.upcase}_API_SECRET"]
+        config.omniauth provider_name, api_key, api_secret
+      end
+    end
+
+  # config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
+  #     scope: 'email',
+  #     info_fields: 'email, first_name, last_name',
+  #     image_size: 'square',  # 50x50, guaranteed ratio
+  #     secure_image_url: true
 
   # config.omniauth :facebook, "185705521856637", "8e892e5059501e678abfd813a6766866",
   #                 callback_url: "https://vapeshows.herokuapp.com/users/auth/facebook/callback"

@@ -4,6 +4,17 @@
     <%= image_tag "logo3.jpg" %>
   <% end %>
 
+
+
+  <ul class="nav">
+     <% if user_signed_in? -%>
+       <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+     <% else -%>
+       <li><%= link_to 'Sign in', new_user_session_path %></li>
+     <% end -%>
+   </ul>
+
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
