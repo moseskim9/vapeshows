@@ -77,3 +77,137 @@
   opacity: 1;
   right: 0;
 }
+
+.btn-moses {
+  border-radius: 0px;
+  background: #ff5a5f;
+  color: white;
+
+  &:hover {
+    border-radius: 0px;
+    background: darken(#55dbcd, 10%);
+    color: white;
+  }
+}
+
+
+#customButton {
+  margin-left: 15px;
+
+}
+
+.btn-social, .btn-social-icon {
+    position: relative;
+    padding-left: 46px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn-facebook {
+    background-color: #3b5998;
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-default-search {
+    color: #333;
+    background-color: #2CD1C0;
+    border: 0;
+
+
+    &:hover {
+      color: white;
+      background-color: #2CD1C0;
+      filter: contrast(1.2);
+    }
+
+    &:focus, &:active {
+      outline: 0;
+      background-color: #2CD1C0;
+      color: white;
+
+      &:hover {
+        outline: 0;
+        background-color: #2CD1C0;
+        color: white;
+      }
+    }
+
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+}
+.text-center {
+    text-align: center;
+}
+.final_button {
+  font-weight: bold;
+  vertical-align: top;
+}
+.final_button_right {
+  font-weight: bold;
+  vertical-align: top;
+}
+.final_button_right a{
+  font-weight: light;
+  vertical-align: top;
+  color: black;
+}
+
+
+
+.checkout-btn {
+  display: flex;
+  background: darken(#55dbcd, 10%);
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  transform: scale(1);
+  transition: .15s ease transform;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background: #55dbcd;
+    transform: scale(1.1)
+  }
+
+  span:first-child {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  span:last-child {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+

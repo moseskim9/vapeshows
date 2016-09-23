@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
+  # before_action :event_loc
 
+  def event_loc
+      session[:event_id] = params[:event_id]
+  end
 
 end
