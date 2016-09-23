@@ -32,6 +32,9 @@ Devise.setup do |config|
       image_size: 'square',  # 50x50, guaranteed ratio
       secure_image_url: true
 
+  config.omniauth :facebook, "185705521856637", "866c414d050c32e3f0723635c5b17925",
+                  callback_url: "https://vapeshows.herokuapp.com/users/auth/facebook/callback"
+
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
