@@ -1,6 +1,29 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+  require 'devise/orm/active_record'
+
+  config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
+    scope: 'email',
+    info_fields: 'email, first_name, last_name',
+    image_size: 'square',  # 50x50, guaranteed ratio
+    secure_image_url: true
+
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'],
+    ENV['GOOGLE_CLIENT_SECRET'],
+    { access_type: "offline",
+      prompt: "consent",
+      select_account: true,
+      scope: 'userinfo.email,calendar' }
+
+
+
+
+
+
+
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
@@ -24,13 +47,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/active_record'
 
-  config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
-    scope: 'email',
-    info_fields: 'email, first_name, last_name',
-    image_size: 'square',  # 50x50, guaranteed ratio
-    secure_image_url: true
 
   # config.omniauth :facebook, "185705521856637", "8e892e5059501e678abfd813a6766866",
   #                 callback_url: "https://vapeshows.herokuapp.com/users/auth/facebook/callback"
