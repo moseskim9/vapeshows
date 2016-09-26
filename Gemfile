@@ -41,6 +41,7 @@ gem 'cloudinary'
 gem "geocoder"
 gem "gmaps4rails"
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"

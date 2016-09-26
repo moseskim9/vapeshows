@@ -4,19 +4,36 @@
       <div class="card">
         <div class="user-show">
           <center class="user-container">
-
             <%= image_tag(@user.facebook_picture_url, class: "image") %>
-
               <h2><%= @user.first_name %> <%= @user.last_name %></h2>
-
               <h5><%= @user.email %></h5>
-
-
             <%= link_to 'Edit', edit_user_path(@user.id) %>
-
           </center>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="wrapper">
+<h2 class="text-center tbm50">YOUR EVENTS</h2>
+  <div class="container">
+    <div class="row">
+      <% @user.events.each do |event| %>
+          <div class="col-xs-12 col-sm-6 tbm15">
+            <%= link_to event_path(event) do %>
+              <div class="image-crop card" style="background-image: url('<%= image_url event.primary_image %>')">
+
+                  <div class="logo-inside-card">
+                    <%= cl_image_tag(event.logo) %>
+                  </div>
+              </div>
+            <% end %>
+
+          </div>
+      <% end %>
     </div>
   </div>
 </div>

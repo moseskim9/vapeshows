@@ -20,11 +20,11 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   end
 
   def new
-    @event = Event.new
+    @event = current_user.events.new
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
     if @event.save
       redirect_to root_path
     else
