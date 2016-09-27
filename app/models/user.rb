@@ -67,6 +67,7 @@ class User < ApplicationRecord
          else
            return nil
          end
+     end
 
    # def self.from_omniauth(access_token)
    #     data = access_token.info
