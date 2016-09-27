@@ -10,14 +10,18 @@ Devise.setup do |config|
     image_size: 'square',  # 50x50, guaranteed ratio
     secure_image_url: true
 
-  config.omniauth :google_oauth2, 'GOOGLE_CLIENT_ID',
-    'GOOGLE_CLIENT_SECRET',
-    { access_type: "offline",
-      prompt: "consent",
-      select_account: true,
-      scope: 'userinfo.email,calendar' }
+  # config.omniauth :google_oauth2, 'GOOGLE_CLIENT_ID',
+  #   'GOOGLE_CLIENT_SECRET',
+  #   { access_type: "offline",
+  #     prompt: "consent",
+  #     select_account: true,
+  #     scope: 'userinfo.email,calendar' }
 
-
+  config.omniauth :google_oauth2, "GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET",
+  { access_type: "offline",
+    prompt: "consent",
+    select_account: true,
+    scope: 'userinfo.email,calendar' }
 
 
 
