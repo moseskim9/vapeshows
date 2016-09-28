@@ -2,6 +2,7 @@ class Event < ApplicationRecord
   belongs_to :user, optional: true
   has_many :reviews
 
+
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 

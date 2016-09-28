@@ -1,10 +1,10 @@
 class User < ApplicationRecord
   has_many :events
+  after_create :send_welcome_email
 
   devise :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
 
 
    def self.find_for_facebook_oauth(auth)
@@ -25,12 +25,11 @@ class User < ApplicationRecord
        end
 
        return user
-     end
+   end
 
    def self.from_omniauth(access_token)
        data = access_token.info
        user = User.where(:email => data["email"]).first
-
        unless user
            user = User.create(
               email: data["email"],
@@ -38,6 +37,12 @@ class User < ApplicationRecord
            )
        end
        user
+   end
+
+   private
+
+   def send_welcome_email
+      UserMailer.welcome(self).deliver_now
    end
 
 
