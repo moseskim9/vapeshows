@@ -31,7 +31,8 @@
 @import "buttons";
 @import "ratings";
 @import "avatars";
-
+@import "bootstrap-social";
+@import "forms";
 
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
@@ -78,6 +79,9 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 }
 .tbm50 {
   margin: 50px 0;
+}
+.bm50 {
+  margin-bottom: 50px;
 }
 .no-padding {
   padding: 0 0;

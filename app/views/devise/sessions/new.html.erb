@@ -8,7 +8,13 @@
             <span class="fa fa-facebook"></span>
             Connect with Facebook
           </a>
-          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+
+          <a class="btn btn-block btn-social btn-google text-center" href="/users/auth/google_oauth2">
+            <span class="fa fa-google"></span>
+            Connect with Google
+          </a>
+
+
       <h5 class="text-center">--OR--</h5>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">

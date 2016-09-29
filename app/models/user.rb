@@ -45,5 +45,9 @@ class User < ApplicationRecord
       UserMailer.welcome(self).deliver_now
    end
 
+   def subscribe_to_newsletter
+     SubscribeToNewsletterService.new(self).call
+   end
+
 
 end

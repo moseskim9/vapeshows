@@ -137,24 +137,24 @@
 }
 .btn-default-search {
     color: #333;
-    background-color: #2CD1C0;
+    background-color: #ff5a5f;
     border: 0;
 
 
     &:hover {
       color: white;
-      background-color: #2CD1C0;
+      background-color: #fd5358;
       filter: contrast(1.2);
     }
 
     &:focus, &:active {
       outline: 0;
-      background-color: #2CD1C0;
+      background-color: #fd5358;
       color: white;
 
       &:hover {
         outline: 0;
-        background-color: #2CD1C0;
+        background-color: #fd5358;
         color: white;
       }
     }

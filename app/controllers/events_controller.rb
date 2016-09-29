@@ -45,6 +45,12 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
     @event.destroy
   end
 
+  def search
+    @city = params[:location]
+    p  @city
+    @events_city = Event.near(@city, 50)
+  end
+
   private
 
   def find_event
