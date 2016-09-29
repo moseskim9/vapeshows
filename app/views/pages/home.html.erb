@@ -1,6 +1,6 @@
 
 
-<div class="banner" style="background-image: linear-gradient(107deg, rgba(0,25,29,0.6) 0%, rgba(0,-344,27,0.3) 50%), url('http://www.quadrathell.cn.ua/_nw/18/94684225.jpg');">
+<div class="banner" style="background-image: linear-gradient(107deg, rgba(0,25,29,0.6) 0%, rgba(0,-344,27,0.3) 50%), url('http://www.technocrazed.com/wp-content/uploads/2015/12/New-York-Wallpaper-Background-7.jpg');">
   <div class="banner-content white">
     <h1 style="font-weight: lighter; font-size: 80px;">Vape Shows</h1>
     <p>Your one-stop to all the vape shows</p>
@@ -17,12 +17,12 @@
 
 
 <div class="text-center bm50">
-  <h2 class="tbm50">Latest Events</h2>
+  <h2 class="tbm50" style="font-weight: normal; font-size: 30px;">Latest Events</h2>
 
     <div class="container">
       <div class="row">
         <% @latest_events.each do |event| %>
-            <div class="col-xs-6 col-sm-3 tbm15">
+            <div class="col-xs-12 col-sm-3 tbm15">
 
               <%= link_to event_path(event) do %>
                 <div class="image-crop card" style="background-image: url('<%= image_url event.primary_image %>')">
@@ -42,7 +42,7 @@
 
   <div class="banner" style="background-color: #3c465a; height: 85vh; ">
     <div class="banner-content white">
-     <h1>DISCOVER</h1>
+     <h1 style="font-weight: lighter; font-size: 60px;">DISCOVER</h1>
      <p>List and view all vape events around the world.</p>
 
      <img class="avatar-large" src="https://cdn0.iconfinder.com/data/icons/flaturici-set-5/512/binoculars-512.png" alt="">
@@ -54,17 +54,13 @@
   </div>
 
 
-
-
-
-
   <div class="text-center tbm50">
-    <h2 class="tbm50">Latest Reviews</h2>
+    <h2 class="tbm50" style="font-weight: normal; font-size: 30px;">Latest Reviews</h2>
 
       <div class="container">
         <div class="row">
           <% @latest_reviews.each do |review| %>
-              <div class="col-xs-4 tbm15">
+              <div class="col-xs-12 col-sm-4 tbm15">
 
 
                 <h2><%= review.event.name %></h2>

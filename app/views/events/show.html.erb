@@ -95,19 +95,23 @@
 
 
 <!-- Reviews Loop Start -->
-  <% @reviews.each do |r| %>
-    <div class="container line-bottom">
-      <h3 class="line-height"><%= r.headline %></h3>
+  <% if @event.reviews.present? %>
+    <% @event.reviews.each do |r| %>
+      <div class="container line-bottom">
+        <h3 class="line-height"><%= r.headline %></h3>
 
-      <div class="star-ratings-css">
-        <div class="star-ratings-css-top" style="width:<%= (r.rating * 21.5).to_i %>%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="star-ratings-css">
+          <div class="star-ratings-css-top" style="width:<%= (r.rating * 21.5).to_i %>%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
 
-        <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+        <p class="review-date"> <%= r.date %>  </p>
+        <p> <%= r.description %> </p>
+
       </div>
-      <p class="review-date"> <%= r.date %>  </p>
-      <p> <%= r.description %> </p>
-
-    </div>
+    <% end %>
+  <% else %>
+    <p class="text-center gray-warning tbm50"><i>This event does not have any reviews currently. Be the first one!</i></p>
   <% end %>
 <!-- Reviews Loop End -->
 
