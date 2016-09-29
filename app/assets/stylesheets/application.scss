@@ -83,6 +83,9 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 .bm50 {
   margin-bottom: 50px;
 }
+.lrm15 {
+  margin: 0 15px;
+}
 .no-padding {
   padding: 0 0;
 }
@@ -100,4 +103,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 .padded {
   padding: 5em 0;
 }
-
+.border-around {
+  border: 1px solid gray;
+  box-sizing: border-box;
+}

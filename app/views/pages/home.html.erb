@@ -58,14 +58,17 @@
 
 
 
-  <div class="text-center">
+  <div class="text-center tbm50">
     <h2 class="tbm50">Latest Reviews</h2>
 
       <div class="container">
         <div class="row">
           <% @latest_reviews.each do |review| %>
-              <div class="col-xs-4  tbm15">
-                <h3 class="line-height"><%= review.headline %></h3>
+              <div class="col-xs-4 tbm15">
+
+
+                <h2><%= review.event.name %></h2>
+                <h4 class="line-height">"<i><%= review.headline %></i>"</h4>
                 <div class="star-ratings-css">
                   <div class="star-ratings-css-top" style="width:<%= (review.rating * 21.5).to_i %>%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
 
