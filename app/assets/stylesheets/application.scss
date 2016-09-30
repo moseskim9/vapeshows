@@ -33,7 +33,7 @@
 @import "avatars";
 @import "bootstrap-social";
 @import "forms";
-
+@import "figcaption";
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 $base-font: "Open Sans", "Helvetica", "sans-serif";
@@ -89,6 +89,10 @@ h2 {
 }
 .lrm15 {
   margin: 0 15px;
+}
+.lrm25 {
+  margin-left: 25px;
+  margin-right: 25px;
 }
 .no-padding {
   padding: 0 0;

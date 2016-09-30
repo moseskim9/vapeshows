@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @reviews = Review.all
 
 
-    @latest_events = @events.first(4)
+    @latest_events = @events.first(3)
     @latest_reviews = @reviews.last(3)
   end
 
