@@ -8,7 +8,12 @@
 }
 .logo-inside-card {
   position: absolute;
-  width: 100px;
+  width: 70px;
+  img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px white solid;
+  }
 }
 .logo-rounded {
   img {
