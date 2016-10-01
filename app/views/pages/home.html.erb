@@ -14,6 +14,7 @@
   </div>
 </div>
 
+<!-- Upcoming Events Start -->
 
 
 <div class="text-center bm50">
@@ -22,18 +23,15 @@
     <div class="container">
       <div class="row">
         <% @latest_events.each do |event| %>
-            <div class="col-xs-12 col-sm-4 tbm15">
+            <div class="col-xs-12 col-sm-4 tbm15 ">
 
               <%= link_to event_path(event) do %>
                 <div class="image-crop card" style="background-image: url('<%= image_url event.primary_image %>')">
-               <!--    <div class="card-category"><%= event.country %></div>
-                  <div class="card-description">
-                      <h2><%= event.start_date %></h2>
-                      <p><%= event.start_date %></p>
-                  </div> -->
-                  <div class="logo-inside-card">
-                    <%= cl_image_tag(event.logo) %>
-                  </div>
+                   <div class="logo-inside-card">
+                     <%= cl_image_tag(event.logo) %>
+                    <h2> <%= event.name %> </h3>
+                    <p><%= event.country %> </p>
+                   </div>
                 </div>
               <% end %>
 
@@ -42,6 +40,10 @@
       </div>
     </div>
   </div>
+
+<!-- Upcoming Events End -->
+
+<!-- Discover Banner Start -->
 
 
   <div class="banner" style="background-color: #3c465a; height: 85vh; ">
@@ -57,73 +59,72 @@
     </div>
   </div>
 
+<!-- Discover Banner End -->
+
+<!--   Continents Cards Start -->
+
   <div class="tbm50">
     <div class="container">
       <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-8">
           <div class="image-crop card" style="background-image: url('http://www.allmacwallpaper.com/get/MacBook-Air-13-inch-wallpapers/Manhattan-Bridge-at-Dusk-New-York-United-States-1440x900/2521-4.jpg')">
-
             <div class="banner-content white">
               <h3 style="font-weight: normal; font-size: 30px; color: white;">UNITED STATES</h3>
             </div>
-
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="image-crop card" style="background-image: url('https://images6.alphacoders.com/563/563101.jpg')">
-
             <div class="banner-content white text-center">
               <h3 style="font-weight: normal; font-size: 30px; color: white;">CENTRAL & SOUTH AMERICA</h3>
             </div>
-
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="image-crop card" style="background-image: url('http://wallpapercave.com/wp/PuwoAuJ.jpg')">
-
             <div class="banner-content white">
               <h3 style="font-weight: normal; font-size: 30px; color: white;">EUROPE</h3>
             </div>
-
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="image-crop card" style="background-image: url('https://www.ajib.fr/wp-content/uploads/2015/03/dubai-city-hd-wallpapers.jpg')">
-
             <div class="banner-content white text-center">
               <h3 style="font-weight: normal; font-size: 30px; color: white;">MIDDLE EAST</h3>
             </div>
-
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="image-crop card" style="background-image: url('http://files.vividscreen.info/soft/7b279815e88321ba1132da09662d3776/Niagara-Falls-Ontario-1920x1200.jpg')">
-
             <div class="banner-content white">
               <h3 style="font-weight: normal; font-size: 30px; color: white;">CANADA</h3>
             </div>
-
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="image-crop card" style="background-image: url('http://impakter.com/wp-content/uploads/2015/02/10-courtyard.jpg')">
-
             <div class="banner-content white">
               <h3 style="font-weight: normal; font-size: 30px; color: white;">ASIA</h3>
             </div>
-
           </div>
         </div>
 
       </div>
     </div>
   </div>
+
+<!-- Continents Cards End -->
+
+
+
+<!-- Subscription End -->
+
 
 
 

@@ -1,18 +1,22 @@
 .image-crop {
   min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
-    max-width: 100%;
+    max-width: 70px;
     height: auto;
-    display: block;
   }
 }
 .logo-inside-card {
-  position: absolute;
-  width: 70px;
+  width: 150px;
   img {
-    width: 100%;
+    width: 80px;
     border-radius: 50%;
-    border: 2px white solid;
+    border: 2px black solid;
+  }
+  h1,h2,h3,h4,h5,p {
+    color: white;
   }
 }
 .logo-rounded {

@@ -2,3 +2,24 @@
   margin: 50px 0;
   padding: 0 0;
 }
+.container-local {
+  background-color: #ff5a5f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+
+  h2 {
+    color: white;
+  }
+}
+.row-local {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  background-color: #ff5a5f;
+
+}
