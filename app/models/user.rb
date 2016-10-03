@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_many :events
-  after_create :send_welcome_email
 
   devise :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   devise :database_authenticatable, :registerable,
@@ -41,13 +40,6 @@ class User < ApplicationRecord
 
    private
 
-   def send_welcome_email
-      UserMailer.welcome(self).deliver_now
-   end
-
-   def subscribe_to_newsletter
-     SubscribeToNewsletterService.new(self).call
-   end
 
 
 end

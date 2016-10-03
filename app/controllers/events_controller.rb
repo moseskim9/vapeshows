@@ -26,7 +26,6 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   def create
     @event = current_user.events.build(event_params)
     if @event.save
-      # EventMailer.creation_confirmation(@event).deliver_now
       redirect_to root_path
     else
       render :new
