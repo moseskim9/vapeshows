@@ -5,6 +5,9 @@
     height: auto;
     display: block;
   }
+  @media only screen and (max-width: 768px) {
+    min-height: 300px
+  }
 }
 .white {
   h1 {

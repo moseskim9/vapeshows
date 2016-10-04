@@ -11,19 +11,17 @@
 
 
       <%= simple_form_for @event do |f| %>
-        <%= f.input :name %>
-        <%= f.input :venue_name %>
-        <%= f.input :address %>
+        <%= f.input :name, label: 'Event Name', placeholder: 'LA Vape Convention' %>
+        <%= f.input :venue_name, placeholder: 'LA Staples Center' %>
+        <%= f.input :address, hint: 'Make sure to include city :)', placeholder: '123 Baker St. London' %>
         <%= f.input :country %>
         <%= f.input :region %>
         <%= f.input :description, :as => :text, :input_html => { 'rows' => 5} %>
-        <%= f.input :website_url %>
-        <%= f.input :purchase_url %>
-        <%= f.input :instagram %>
-        <%= f.input :hashtag %>
+        <%= f.input :website_url, placeholder: 'www.vapeshows.com' %>
+        <%= f.input :purchase_url, placeholder: 'www.vapeshows.com/purchasetickets' %>
+        <%= f.input :instagram, placeholder: 'LA Vape Convention' %>
         <%= f.input :facebook %>
         <%= f.input :twitter %>
-        <%= f.input :instagram_api %>
         <%= f.input :start_date %>
         <%= f.input :end_date %>
         <%= f.input :day_description, :as => :text, :input_html => { 'rows' => 5} %>
