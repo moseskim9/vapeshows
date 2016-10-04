@@ -79,13 +79,13 @@
 }
 
 .btn-moses {
-  border-radius: 0px;
+  border-radius: 4px;
   background: #ff5a5f;
   color: white;
 
   &:hover {
-    border-radius: 0px;
-    background: darken(#55dbcd, 10%);
+    border-radius: 4px;
+    background: darken(#ff5a5f, 3%);
     color: white;
   }
 }
