@@ -1,0 +1,26 @@
+
+<div class="text-center">
+  <h2 class="tbm50">Current & Upcoming Shows Near <%= @region %></h2>
+  <%= link_to new_event_path(@event) do %>
+  <button class="button" style="vertical-align:middle"><span> Add Event </span></button>
+  <% end %>
+  <br><br><br>
+    <div class="container">
+      <div class="row">
+        <% @region_event.each do |event| %>
+            <div class="col-xs-12 col-sm-6 tbm15">
+
+              <%= link_to event_path(event) do %>
+                <div class="image-crop card" style="background-image: url('<%= image_url event.primary_image %>')">
+
+                    <div class="logo-inside-card">
+                      <%= cl_image_tag(event.logo) %>
+                    </div>
+                </div>
+              <% end %>
+
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

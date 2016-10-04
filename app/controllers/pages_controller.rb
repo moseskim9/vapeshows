@@ -5,7 +5,10 @@ class PagesController < ApplicationController
     @reviews = Review.all
 
 
-    @latest_events = @events.first(3)
+    @events = Event.where(["start_date > ?", Time.current])
+    @sorted = @events.sort_by &:start_date
+
+    @latest_events = @sorted.first(3)
     @latest_reviews = @reviews.last(3)
   end
 

@@ -44,6 +44,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'gibbon'
+gem 'enum_help'
 
 
 source 'https://rails-assets.org' do

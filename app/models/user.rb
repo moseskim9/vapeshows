@@ -38,6 +38,9 @@ class User < ApplicationRecord
        user
    end
 
+
+
+
    private
 
 

@@ -50,6 +50,11 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
     @events_city = Event.near(@city, 50)
   end
 
+  def region
+    @events = Event.all
+    @region_event = Event.where(region: params[:region])
+  end
+
   private
 
   def find_event
@@ -57,6 +62,6 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   end
 
   def event_params
-    params.require(:event).permit(:name, :venue_name, :address, :country, :description, :website_url, :purchase_url, :logo, :logo_cache, :primary_image, :primary_image_cache, :instagram, :hashtag, :facebook, :twitter, :instagram_api, :start_date, :end_date, :day_description, :start_time, :end_time)
+    params.require(:event).permit(:name, :venue_name, :address, :country, :region, :description, :website_url, :purchase_url, :logo, :logo_cache, :primary_image, :primary_image_cache, :instagram, :hashtag, :facebook, :twitter, :instagram_api, :start_date, :end_date, :day_description, :start_time, :end_time)
   end
 end
