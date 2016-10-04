@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get ':region', to: "events#region"
 
   resources :events do
     resources :reviews
@@ -15,6 +14,8 @@ Rails.application.routes.draw do
       get 'search', to: "events#search"
     end
   end
+
+  get ':region', to: "events#region"
 
   get 'pages/home'
 
