@@ -6,7 +6,7 @@
       <%= simple_form_for [@event, @review] do |f| %>
         <%= f.input :headline %>
         <%= f.input :description, :as => :text, :input_html => { 'rows' => 5} %>
-        <%= f.input :rating %>
+        <%= f.input :rating, collection: 1..5 %>
         <%= f.input :date %>
         <%= f.button :submit, class: 'btn-moses', value: 'Submit Review' %>
       <% end %>
